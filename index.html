@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BlockCode Editor</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- QuillJS Styles -->
+    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+    <link href="https://cdn.quilljs.com/1.3.6/quill.bubble.css" rel="stylesheet">
+
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #f0f2f5;
+      }
+      .code-font {
+        font-family: 'Fira Code', monospace;
+      }
+      /* Custom scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #cbd5e1;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #94a3b8;
+      }
+
+      /* Quill Overrides to match editor aesthetic */
+      .ql-container.ql-snow {
+        border: none !important;
+        font-family: 'Inter', sans-serif !important;
+        font-size: 16px !important;
+      }
+      .ql-editor {
+        padding: 0 !important;
+        min-height: 24px;
+      }
+      .ql-toolbar.ql-snow {
+        border: none !important;
+        background: #fff;
+        border-bottom: 1px solid #f1f5f9 !important;
+        padding: 4px 8px !important;
+        border-radius: 8px 8px 0 0;
+        position: absolute;
+        top: -42px;
+        left: 0;
+        z-index: 40;
+        box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+        display: none;
+      }
+      .group.is-selected .ql-toolbar.ql-snow {
+        display: block;
+      }
+      .ql-editor.ql-blank::before {
+        left: 0 !important;
+        font-style: normal !important;
+        color: #cbd5e1 !important;
+      }
+    </style>
+    <!-- QuillJS Library -->
+    <script src="https://cdn.quilljs.com/1.3.6/quill.min.js"></script>
+
+    <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.38.0",
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
+    "@dnd-kit/sortable": "https://esm.sh/@dnd-kit/sortable@^10.0.0",
+    "@dnd-kit/utilities": "https://esm.sh/@dnd-kit/utilities@^3.2.2",
+    "@dnd-kit/core": "https://esm.sh/@dnd-kit/core@^6.3.1"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>

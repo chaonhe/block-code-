@@ -1,0 +1,5 @@
+{
+  "name": "BlockCode - Gutenberg Inspired Editor",
+  "description": "A high-performance block-based code editor inspired by WordPress Gutenberg, featuring drag-and-drop code blocks, AI-assisted code generation, and a robust JSON schema.",
+  "requestFramePermissions": []
+}
